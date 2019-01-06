@@ -1,0 +1,77 @@
+package com.thzm.eye025.serviets;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
+
+
+
+
+
+
+@WebServlet("/publishAbs")
+public class PublishAbsServiet extends HttpServlet {
+	
+	DiskFileItemFactory factory;
+	String picDir;
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+		super.init(config);
+		
+		//获取应用全局对象ServletContext
+		ServletContext app = config.getServletContext();
+		
+		//获取/pictures所在的物理路径
+		picDir = app.getRealPath("/pictures");
+		
+		File repositoy = new File(picDir);
+		
+		//设置磁盘缓冲阀值和缓冲目录
+		factory = new DiskFileItemFactory(1024,repositoy);
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
+		
+		if(ServletFileUpload.isMultipartContent(request)) {
+			ServletFileUpload upload = new ServletFileUpload(factory);
+			try {
+				List<FileItem> items = upload.parseRequest(request);
+				for(int i=0; i<items.size();i++) {
+					FileItem item = items.get(i);
+					if(item.isFormField()) {
+						String name = item.getFieldName();
+						String value = item.getString();
+						System.out.println(name + ":" + value);
+					}else {
+						String fileName = item.getFieldName();
+						String name = item.getName();
+						System.out.println(name);
+						if(!"".equals(name)) {
+							
+							item.write(new File(picDir + "/",name));
+						}
+					}
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		}	
+		
+	}
+}

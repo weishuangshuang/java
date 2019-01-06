@@ -1,0 +1,46 @@
+package com.thzm.eye025.serviets;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.catalina.connector.Request;
+
+import com.thzm.eye025.bean.Department;
+import com.thzm.eye025.service.DepartmentService;
+
+
+@WebServlet("/Departmentss")
+public class DepartmentServlet extends HttpServlet {
+
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		List<Department> depa = null;
+		
+		try {
+			depa = DepartmentService.selectAll();
+			request.setAttribute("depa", depa);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+	
+	public static void main(String[] args) throws SQLException {
+		System.out.println(DepartmentService.selectAll());
+	}
+
+}

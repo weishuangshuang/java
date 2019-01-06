@@ -1,0 +1,96 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8
+import="java.util.List, com.thzm.eye025.bean.*"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>科室介绍</title>
+	<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.top{
+		width: 400px;
+		height: 50px;
+		font-size: 34px;
+		border: 1px solid red;
+		text-align: center;
+		line-height: 50px;
+		font-weight: bold;
+		margin: auto;
+	}
+		.main{
+			display: flex;
+			flex-direction: row;
+			width: 1073px;
+			height: 300px;
+			border: 1px solid red;
+			margin: auto;
+			margin-top: 90px;
+			font-family: "微软雅黑";
+		}
+		.eyeground {
+			width: 350px;
+			height: 300px;
+			background: #f6f6f6;
+		}
+		.cataract{
+			width: 350px;
+			height: 300px;
+			margin-left: 10px;
+			background: #f6f6f6;
+		}
+		.myopprthois{
+			width: 350px;
+			height: 300px;
+			margin-left: 10px;
+			background: #f6f6f6;
+		}
+		.imgs{
+			width: 350px;
+			height: 150px;
+			border: 1px solid red;
+		}
+		span{
+			display: block;
+			font-size: 24px;
+			font-weight: bold;
+			color: #50ca2a;
+			margin-top: 10px;
+			margin-left: 10px;
+		}
+		p{
+			margin-left: 10px;
+			font-size: 14px;
+			color: #5c5c5c;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">科室介绍</div>
+	<div class="main">
+		<div class="eyeground">
+			<div class="imgs"><img src="" alt=""></div>
+			<span>
+				<%
+					List<Department> dep = new request.getAttribute("dep");
+				%>
+			</span>
+			<p>这是一段介绍本科室的文字这是一段介绍本科室的文字这是一段介绍本科室的文字这是一段介绍本科室的文字这是一段介绍本科室的文字</p>
+		</div>
+		<div class="cataract">
+			<div class="imgs"><img src="" alt=""></div>
+			<span>白内障学科</span>
+			<p>这是一段介绍本科室的文字这是一段介绍本科室的文字这是一段介绍本科室的文字这是一段介绍本科室的文字这是一段介绍本科室的文字</p>
+		</div>
+		<div class="myopprthois">
+			<div class="imgs"><img src="" alt=""></div>
+			<span>近视矫正学科</span>
+			<p>这是一段介绍本科室的文字这是一段介绍本科室的文字这是一段介绍本科室的文字这是一段介绍本科室的文字这是一段介绍本科室的文字</p>
+		</div>
+	</div>
+	
+</body>
+</html>

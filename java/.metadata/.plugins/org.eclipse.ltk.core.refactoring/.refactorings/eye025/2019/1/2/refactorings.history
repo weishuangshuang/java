@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;eye025/WebContent/Subscribe.jsp&apos; to &apos;subscribe.jsp&apos;" description="Rename resource &apos;Subscribe.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/Subscribe.jsp" name="subscribe.jsp" stamp="1546769472641" updateReferences="true"/>
+</session>

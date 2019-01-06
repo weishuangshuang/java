@@ -1,0 +1,35 @@
+package advance;
+
+public class MaiPiao {
+	
+	public static int Ticket() {
+		int ticket[] = {};
+		for(int i=0; i<100; i++) {
+			ticket[i] = i;
+			return ticket[i];
+		}
+		return 0;
+		
+	}
+//	
+//	public synchronized static void mai(int a) {
+//		
+//		int len = Ticket().length;
+//		if(a <= Ticket().length) {
+//			while(a > 0) {
+//				
+//				System.out.println(Ticket()[len--]);
+//				Ticket()[len] = (Integer) null;
+//			}
+//		}
+//		
+//	}
+//	
+	
+
+	public static void main(String[] args) {
+		Ticket();
+
+	}
+
+}

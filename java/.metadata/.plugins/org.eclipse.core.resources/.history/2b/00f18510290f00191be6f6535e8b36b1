@@ -1,0 +1,49 @@
+package advance;
+
+public class MaiPiao {
+	
+	public static int[] Ticket() {
+		int[] anArry = new int[100];
+		for(int i=0; i<100; i++) {
+			anArry[i] = i;
+			
+		}
+		return anArry;
+		
+	}
+	public static int len = Ticket().length-1;
+	
+	
+	
+	public synchronized static void mai(int a) {
+		
+		if(a <= len) {
+			while(a >0) {
+				System.out.println(Ticket()[len--]);
+				a--;
+			}
+		}
+	
+	}
+	
+	
+
+	public static void main(String[] args) {
+//		int[] c = Ticket();
+//		
+//		for(int i=0 ; i<100; i++) {
+//			System.out.println(c[i]);
+//		}
+		
+		
+		Thread t = new Thread() {
+			
+		};
+		
+		mai(10);
+		mai(5);
+	
+
+	}
+
+}

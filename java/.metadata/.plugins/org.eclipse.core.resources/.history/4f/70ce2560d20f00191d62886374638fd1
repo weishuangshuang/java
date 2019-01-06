@@ -1,0 +1,16 @@
+package com.thzm.eye025.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.thzm.eye025.bean.Department;
+import com.thzm.eye025.dao.DepartmentDAO;
+
+public class DepartmentServlet {
+	
+	public static List<Department> departmentAll() throws SQLException{
+		
+		String sql = "select * from department"; 
+		return DepartmentDAO.select(sql);
+	}
+}

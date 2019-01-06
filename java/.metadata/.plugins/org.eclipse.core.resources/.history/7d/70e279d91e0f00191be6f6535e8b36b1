@@ -1,0 +1,9 @@
+package advance;
+
+public class MaiPiaoTicket {
+
+	
+	public void MaiPiaoTicket() {}
+	
+
+}

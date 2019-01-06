@@ -1,0 +1,20 @@
+package advance;
+
+public class MaiPiao {
+	
+	public static void mai(int a) {
+		if(a <= MaiPiaoTicket.ticket.length) {
+			while(a > 0) {
+				System.out.println(MaiPiaoTicket.ticket);
+			}
+		}
+	}
+	
+	
+
+	public static void main(String[] args) {
+		MaiPiao.mai(10);
+
+	}
+
+}

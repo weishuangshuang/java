@@ -1,0 +1,16 @@
+package advance;
+
+public class MaiPiaoTicket {
+	
+	
+	public int[] Ticket() {
+		int ticket[] = {};s
+		for(int i=0; i<100; i++) {
+			ticket[i] = i;
+		}
+		return ticket;
+		
+	}
+	
+
+}

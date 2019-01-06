@@ -1,0 +1,11 @@
+package advance;
+
+public class T {
+	
+	public int id;
+	
+	public void T(int id ) {
+		this.id = id;
+	}
+
+}

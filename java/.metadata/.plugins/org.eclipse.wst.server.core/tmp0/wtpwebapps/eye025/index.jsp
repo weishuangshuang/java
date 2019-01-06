@@ -1,0 +1,121 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" session="true"
+    pageEncoding="UTF-8"%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EyE眼科</title>
+</head>
+<style>
+
+	html,body{
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	.panel{
+		width: 80%;
+		height: 80%;
+		
+	}
+	table{
+		width: 100%;
+		font-size: 2em;
+		background: #eddcdc;
+	}
+	td:nth-child(1){
+		text-align: right;
+	}
+	td{
+	font-size:16px;
+		padding-top: 10px;
+	}
+	.input{
+		width: 300px;
+		margin-top: 10px;
+	}
+	#btn{
+		font-size: 0.8em;
+		margin: 10px;
+		padding: 10px;
+		border-radius:5px; 
+	}
+</style>
+
+
+<script>
+function login(f){
+	var ok = true;
+	var adminName = f.adminName.value;
+	var rege = /^[A-Za-z]{2,20}$/;
+	var adminMsg = document.getElementById("adminMsg");
+	adminMsg.innerText = "";
+	var passwordMsg = document.getElementById("passwordMsg");
+	passwordMsg.innerText = "";
+	
+	if(!rege.test(adminName)){
+		ok = false;
+		var adminMsg = document.getElementById("adminMsg");
+		adminMsg.innerText = "登录名格式错误";
+	}
+	
+	var pwd = f.password.value;
+	var reg = /^[0-9a-zA-Z]{6,12}$/;
+	if(!reg.test(pwd)){
+		ok = false;
+		var passwordMsg = document.getElementById("passwordMsg");
+		passwordMsg.innerText = "密码格式错误";
+	}
+	
+	return ok;
+}
+
+</script>
+
+<body>
+
+<div class="panel">
+	<h1>Eye眼科后台管理系统</h1>
+	<form action="login" method="post" onsubmit="return login(this)">
+		<table>
+			<tr>
+				<td>登录名</td>
+				<td><input class="input" type="text" name="adminName" id="adminName"></td>
+				<td id="adminMsg"></td>
+			</tr>
+			<tr>
+				<td>密码</td>
+				<td><input class="input" type="password" name="password" id="password"></td>
+				<td id="passwordMsg"></td>
+			</tr>
+			<tr>
+				<td colspan="3">十天免登录<input type="checkbox" name="autologin"/></td>
+				<td >
+				
+<%
+	String msg = (String)request.getAttribute("msg");
+	if(msg != null){
+		out.print(msg);	//out是自带的一个输出方法
+		}
+%>
+					<input type="submit" value="登录" id="btn">
+				</td>
+				
+			</tr>
+		</table>
+	</form>
+</div>
+	访问人数： <%=application.getAttribute("count") %>
+</body>
+</html>

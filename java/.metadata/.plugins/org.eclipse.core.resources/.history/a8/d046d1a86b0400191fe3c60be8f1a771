@@ -1,0 +1,14 @@
+package com.thzm.eye025.service;
+
+
+public class UserService {
+	
+	public static boolean updateUserInfo(String name,String adminName,String pwd,boolean isSuperAdmin,int id) {
+		boolean ok = true;
+		String sql = "update sys_admin set name=?,admin_naem=?,password=md5(?),super_admin=?,id=?";
+		
+		
+		return ok;
+	}
+	
+}

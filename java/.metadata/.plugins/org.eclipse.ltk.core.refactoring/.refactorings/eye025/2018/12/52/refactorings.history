@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;eye025/src/com/thzm/eye025/serviets/PublicshAbsServiet.java&apos; to &apos;PublishAbsServiet.java&apos;" description="Rename resource &apos;PublicshAbsServiet.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/thzm/eye025/serviets/PublicshAbsServiet.java" name="PublishAbsServiet.java" stamp="1545900963174" updateReferences="true"/>
+</session>

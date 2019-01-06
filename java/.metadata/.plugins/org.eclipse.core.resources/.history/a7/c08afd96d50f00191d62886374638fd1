@@ -1,0 +1,23 @@
+package com.thzm.eye025.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.thzm.eye025.bean.Department;
+import com.thzm.eye025.dao.DepartmentDAO;
+import com.thzm.eye025.dao.JdbcTemplate;
+
+public class DepartmentServlet {
+	
+	public static int departmentAll() throws SQLException{
+		
+		String sql = "select * from department where id ="; 
+		return JdbcTemplate.update(sql);
+	}
+	
+	
+	public static void main(String[] args) throws SQLException {
+		System.out.println(departmentAll());
+	}
+}
+

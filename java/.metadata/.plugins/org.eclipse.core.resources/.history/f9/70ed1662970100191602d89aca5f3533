@@ -1,0 +1,16 @@
+package com.thzhima.eye025.dao;
+
+public class ConnectionUtil {
+	
+	public ConnectionUtil getConnectionUtil() {
+		ConnectionUtil conn = null;
+		String userNmae = "eye025";
+		String password = "123456";
+		String url = "jdbc:mariadb://127.0.0.1:3306/eye025";
+		
+		Class.forName("org.mariadb.jdbc.Driver");
+		
+		return conn;
+	};
+
+}

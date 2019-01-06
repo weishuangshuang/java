@@ -1,0 +1,12 @@
+package com.thzm.eye025.service;
+
+import java.sql.SQLException;
+
+import com.thzm.eye025.dao.JdbcTemplate;
+
+public class UserService {
+	public static int update(String sql,Object...args) throws SQLException {
+		return JdbcTemplate.update(sql);
+	}
+
+}

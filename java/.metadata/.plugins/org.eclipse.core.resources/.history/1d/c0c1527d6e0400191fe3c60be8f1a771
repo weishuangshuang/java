@@ -1,0 +1,31 @@
+package com.thzm.eye025.service;
+
+import java.sql.SQLException;
+
+import com.thzm.eye025.dao.SysadminDAO;
+
+public class UserService {
+	
+	public static boolean updateUserInfo(String name,int id) {
+		boolean ok = true;
+		String sql = "update sys_admin set name=? where id=?";
+		
+		try {
+			int count = SysadminDAO.update(sql, name,id);
+			if(count != 1){
+				ok=false;
+			}
+		} catch (SQLException e) {
+			ok = false;
+			e.printStackTrace();
+		}
+		
+		return ok;
+	}
+	
+	
+	public static void main(String[] args) {
+		System.out.println(updateUserInfo("王英",2 ));
+	}
+	
+}

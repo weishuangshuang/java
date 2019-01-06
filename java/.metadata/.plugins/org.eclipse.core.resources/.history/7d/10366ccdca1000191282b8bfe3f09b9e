@@ -1,0 +1,20 @@
+package com.thzm.eye025.service;
+
+import java.sql.SQLException;
+
+import com.thzm.eye025.dao.ProfessorDAO;
+
+public class ProfessorService {
+	
+	public static int pic(Object...args) throws SQLException {
+		
+		 String sql = "insert into professor(name,photo,summary,department_id) values(?,?,?,?)";
+		
+		return ProfessorDAO.insert(sql, args);
+	}
+	
+	public static void main(String[] args) throws SQLException {
+		System.out.println(pic("zn","z","s",2));
+	}
+
+}

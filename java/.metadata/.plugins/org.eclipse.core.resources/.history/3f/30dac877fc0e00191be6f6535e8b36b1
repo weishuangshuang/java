@@ -1,0 +1,17 @@
+package advance;
+
+import javax.swing.JFrame;
+
+public class Interruptse extends JFrame{
+	
+	public void Interruptse() {
+		
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
