@@ -46,6 +46,6 @@ public static List<Department> select(String sql, Object...args) throws SQLExcep
 	
 	return (List<Department>) JdbcTemplate.select(sql, ext, args);
 	
-}
+	}
 
 }

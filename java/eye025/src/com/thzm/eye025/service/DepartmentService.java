@@ -1,12 +1,16 @@
 package com.thzm.eye025.service;
 
+import java.sql.Date;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
+import com.thzm.eye025.bean.Abstract;
 import com.thzm.eye025.bean.Department;
 import com.thzm.eye025.dao.DepartmentDAO;
 import com.thzm.eye025.dao.JdbcTemplate;
+import com.thzm.eye025.dao.ResultSetExtractor;
 
 public class DepartmentService {
 	
@@ -36,10 +40,33 @@ public class DepartmentService {
 		return ok;
 	}
 	
+	public static Department getabstract() throws SQLException {
+		String sql = "select * from department where id=1";
+		
+		ResultSetExtractor<Department> ext = new ResultSetExtractor<Department>() {
+
+			@Override
+			public Department extract(ResultSet rst) throws SQLException {
+				if(rst.next()) {
+					int id = rst.getInt("id");
+					String name = rst.getString("name");
+					String pictuer = rst.getString("picture");
+					String content = rst.getString("content");
+					
+					return new Department(id, name, pictuer, content);
+				}
+				return null;
+			}
+		}; 
+		
+		return JdbcTemplate.select(sql, ext);
+	}
 	
 	public static void main(String[] args) throws SQLException {
-//		System.out.println(selectAll());
-		System.out.println( pic("科室", "s", "你好啊"));
+		System.out.println(getabstract());
+		
+		System.out.println();
+	//	System.out.println( pic("科室", "s", "你好啊"));
 		
 	}
 }

@@ -15,7 +15,7 @@ import java.util.Map;
  * @description 数据库操作的模板类，提供公共的数据库JDBC操作功能。
  * 最大化将用户公共相同的代码抽取出来，在这里实现。
  * 用户在访问数据库时，只要写必须的部分就可以了。
- * @author wangrui
+ * @author weishauangshuang
  * @version 1.0
  */
 public class JdbcTemplate {

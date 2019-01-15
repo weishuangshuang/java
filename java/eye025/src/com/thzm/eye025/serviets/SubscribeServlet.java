@@ -2,9 +2,7 @@ package com.thzm.eye025.serviets;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.Date;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.servlet.ServletConfig;
@@ -20,7 +18,7 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-import com.sun.corba.se.spi.orb.ParserData;
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Util;
 import com.thzm.eye025.service.SubscribeService;
 
 
@@ -61,7 +59,7 @@ public class SubscribeServlet extends HttpServlet {
 				String gender;
 				String age;
 				String item;
-				Date date;
+				String date;
 				String  description;
 				
 				for(int i=0; i<items.size(); i++) {
@@ -83,20 +81,16 @@ public class SubscribeServlet extends HttpServlet {
 					}else if("item".equals(name)) {
 						item = value;
 					}else if("date".equals(name)) {
-						SimpleDateFormat de = new SimpleDateFormat("YYYY-MM-DD");
-						date = (Date) de.parse("value");
+						date = value;
 						
 					}else {
 						description = value;
 					}
 				}
 				
-				SubscribeService.pic("Name","connect","email","gender","age","item","date","description");
+				SubscribeService.pic("Name", "connect", "email", "gender", Integer.parseInt("age"), "item", com.thzm.eye025.util.Util.parseDate("date"), "description");
 				
 			} catch (FileUploadException e) {
-				e.printStackTrace();
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
