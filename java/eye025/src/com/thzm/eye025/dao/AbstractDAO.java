@@ -48,5 +48,9 @@ public static List<Abstract>  select(String sql, Object...args) throws SQLExcept
 		
 		return (List<Abstract>) JdbcTemplate.select(sql, ext, args);
 	}
+	public static void main(String[] args) throws SQLException {
+		String sql = "select * from abstract";
+		System.err.println(update(sql));
+	}
 	
 }

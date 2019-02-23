@@ -3,6 +3,7 @@ package com.thzm.eye025.serviets.wx;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +24,7 @@ public class Showdepartment extends HttpServlet {
 		String json = "{}";
 		
 		try {
-			Department abs = DepartmentService.getabstract();
+			List<Department> abs =  DepartmentService.listall();
 			
 			if(abs != null){
 				

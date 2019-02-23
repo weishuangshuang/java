@@ -21,7 +21,7 @@ import com.thzm.eye025.bean.Sysadmin;
 import com.thzm.eye025.service.UserService;
 
 
-@WebFilter("/*")
+//@WebFilter("/*")
 public class Accessfilter implements Filter {
 
   

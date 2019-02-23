@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="com.thzm.eye025.bean.Abstract"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
-<fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="com.thzm.eye025.bean.Sysadmin"/>
@@ -25,9 +20,6 @@
 <fullyQualifiedTypeName name="com.thzm.eye025.service.AbstractService"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="org.apache.catalina.connector.Request"/>
-<fullyQualifiedTypeName name="com.thzm.eye025.dao.DepartmentDAO"/>
-<fullyQualifiedTypeName name="com.thzm.eye025.dao.ProfessorDAO"/>
-<fullyQualifiedTypeName name="com.thzm.eye025.service.ProfessorService"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="com.thzm.eye025.dao.JdbcTemplate"/>
 <fullyQualifiedTypeName name="com.thzm.eye025.dao.SubscribeDAO"/>
@@ -36,7 +28,6 @@
 <fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory"/>
 <fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload"/>
 <fullyQualifiedTypeName name="org.apache.commons.fileupload.servlet.ServletFileUpload"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.FileItem"/>
 <fullyQualifiedTypeName name="org.apache.commons.fileupload.FileItem"/>
 <fullyQualifiedTypeName name="com.thzm.eye025.service.SubscribeService"/>
@@ -46,7 +37,6 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.AbstractList"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
@@ -55,9 +45,19 @@
 <fullyQualifiedTypeName name="eye025wx.DAO.AbstractDAO"/>
 <fullyQualifiedTypeName name="eye025wx.service.Abstractservice"/>
 <fullyQualifiedTypeName name="eye025wx.dao.AbstractDAO"/>
-<fullyQualifiedTypeName name="com.thzm.eye025.dao.ResultSetExtractor"/>
 <fullyQualifiedTypeName name="eye025wx.dao.JdbcTemplate"/>
 <fullyQualifiedTypeName name="eye025wx.bean.Abstract"/>
 <fullyQualifiedTypeName name="com.thzm.eye025.service.DepartmentService"/>
 <fullyQualifiedTypeName name="com.thzm.eye025.bean.Department"/>
+<fullyQualifiedTypeName name="com.thzm.eye025.dao.DepartmentDAO"/>
+<fullyQualifiedTypeName name="com.thzm.eye025.dao.ResultSetExtractor"/>
+<fullyQualifiedTypeName name="com.thzm.eye025.dao.ProfessorDAO"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.thzm.eye025.service.ProfessorService"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.thzm.eye025.bean.Professor"/>
+<fullyQualifiedTypeName name="xdd.ben.RegUser"/>
+<fullyQualifiedTypeName name="xdd.dao.JdbcTemplate"/>
+<fullyQualifiedTypeName name="xdd.dao.RegUserDAO"/>
+<fullyQualifiedTypeName name="xdd.service.RegUserService"/>
 </qualifiedTypeNameHistroy>

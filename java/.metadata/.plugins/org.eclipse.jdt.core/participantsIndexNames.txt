@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
+/home/wss/code_space/java/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1362421614.index
+/xdd/src
 /home/wss/code_space/java/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/506863802.index
 /eye025/src

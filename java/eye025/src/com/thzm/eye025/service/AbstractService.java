@@ -95,8 +95,7 @@ public class AbstractService {
 	}
 	
 	public static void main(String[] args) throws SQLException {
-		List<Abstract> a = listAll();
-		System.out.println(a);
+		System.err.println(getabstract());
 		
 	}
 

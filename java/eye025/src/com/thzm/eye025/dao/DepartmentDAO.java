@@ -1,13 +1,13 @@
 package com.thzm.eye025.dao;
 
-import java.sql.Date;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.thzm.eye025.bean.Abstract;
+
 import com.thzm.eye025.bean.Department;
 
 public class DepartmentDAO {

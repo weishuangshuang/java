@@ -40,8 +40,15 @@ public class DepartmentService {
 		return ok;
 	}
 	
-	public static Department getabstract() throws SQLException {
-		String sql = "select * from department where id=1";
+	
+	public static List<Department> listall() throws SQLException{
+		String sql = "select * from department";
+		return DepartmentDAO.select(sql);
+		
+	}
+	
+	public static Department getdepartment() throws SQLException {
+		String sql = "select * from department";
 		
 		ResultSetExtractor<Department> ext = new ResultSetExtractor<Department>() {
 
@@ -63,9 +70,9 @@ public class DepartmentService {
 	}
 	
 	public static void main(String[] args) throws SQLException {
-		System.out.println(getabstract());
+//		System.out.println(getabstract());
 		
-		System.out.println();
+//		System.out.println(listall());
 	//	System.out.println( pic("科室", "s", "你好啊"));
 		
 	}

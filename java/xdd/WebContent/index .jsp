@@ -1,0 +1,158 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" session="true"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小点点博客</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		ul li{
+			list-style: none;
+		}
+		.main{
+			width: 1200px;
+			margin: 0 auto;
+			margin-top: 10px;
+			box-shadow: #666 0px 0px 10px;
+		}
+		.top{
+			width: 100%;
+			height: 170px;
+			
+		}
+		.logo{
+			height: 140px;
+		}
+		.logo img{
+			width: 100%;
+		}
+		.logo_b{
+			height: 30px;
+			background: #4169E1;
+			display: flex;
+			align-items: center;
+			color: #fff;
+
+		}
+		.logo_b img{
+			margin-left: 10px;
+		}
+		.logo_b a{
+			color: #fff;
+		}
+		.l{
+			margin-left: 30px;
+		}
+		.logo_b span{
+			margin-left: 10px;
+		}
+		.logo_b select{
+			margin-left: 50px;
+			margin-right: 10px;
+		}
+		.r{
+			margin-left: 400px;
+		}
+
+		
+		.center{
+			height: 500px;
+			display: flex;
+			flex-direction: row;
+		}
+		.sidebar{
+			background: #87CEEB;
+			width: 300px;
+		}
+		.sidebar p{
+			width: 100%;
+			height: 30px;
+			background: blue;
+			text-align: center;
+			line-height: 30px;
+			color: #ffffff;
+			font-size: 14px;
+		}
+		.sidebar ul{
+			margin-left: 40px;
+			margin-top: 20px;
+			font-size: 16px;
+		}
+		.sidebar a{
+			color: #000;
+		}
+		.p1{
+			margin-top: 200px;
+		}
+		.content{
+		
+			width: 100%;
+		}
+		.bottom{
+			width: 1200px;
+			height: 90px;
+			background: #000;
+			color: #fff;
+			text-align: center;
+			line-height: 90px;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<div class="main">
+		<div class="top">
+			<div class="logo"><img src="img/banel.jpg" alt=""></div>
+			<div class="logo_b">
+				<img src="img/dot.jpg" alt="">
+				<a href="reg_protocal.html" class="l">注册</a>
+				<span>|</span>
+				<a href="logo.html" class="l">登录</a>
+				<span>|</span>
+				<select name="" id="">
+					<option value="">文章名</option>
+					<option value="">文章分类</option>
+					<option value="">博客名</option>
+				</select>
+				<input type="text">
+				<input type="button" value="检索">
+
+				
+				<a href="" class="r">我的博客</a>
+				<span>/</span>
+				<a href="">博客申请</a>
+				
+			</div>
+		</div>
+		<div class="center">
+			<div class="sidebar">
+				<p>文章分类</p>
+				<ul>
+					<li> <a href="a.html" target="content">编程技巧</a> </li>
+					<li><a href="b.html" target="content">数据库知识</a></li>
+					<li><a href="c.html" target="content">java web开发</a></li>
+				</ul>
+				<p class="p1">博客排行</p>
+				<ul>
+					<li>1.鸟叔的linux之路</li>
+					<li>2.java编程随笔</li>
+					<li>3.java教学知识点汇聚</li>
+				</ul>
+			</div>
+			<iframe name="content" src="LatestArticles.html" frameborder="0" class="content"></iframe>
+		</div>
+		<div class="bottom">
+			<p>copyright © wang rui.wisezone ltd.</p>
+		</div>
+	</div>
+
+</body>
+</html>
