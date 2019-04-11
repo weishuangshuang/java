@@ -45,7 +45,7 @@ public class Accessfilter implements Filter {
 		 if(o != null) { //已登陆
 			 chain.doFilter(request, response); //放行
 		 }else { //未登录
-			 if(-1 != path.indexOf("index.jsp") || -1!=(path.indexOf("login")) || -1 != path.indexOf("showabstract")) { //看当前页面是否是登录界面，是的话允许到登录界面
+			 if(-1 != path.indexOf("index.jsp") || -1!=(path.indexOf("login")) || -1 != path.indexOf("showabstract") || -1 != path.indexOf("department.jsp")) { //看当前页面是否是登录界面，是的话允许到登录界面
 				 chain.doFilter(request, response);
 				 
 			 }else {

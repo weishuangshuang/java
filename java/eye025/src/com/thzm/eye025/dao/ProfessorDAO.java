@@ -42,7 +42,7 @@ public class ProfessorDAO {
 
 	public static void main(String[] args) throws SQLException {
 		
-		//System.out.println(select("select * from professor"));
+		System.out.println(select("select * from professor"));
 		
 	}
 

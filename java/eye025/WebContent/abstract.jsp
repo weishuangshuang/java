@@ -4,40 +4,67 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<link rel='stylesheet'  type='text/css' href='././css/bootstrap.css'>
+	<title>简介</title>
+	<style type="text/css">
+	body{
+	padding:50px;}
+ .table1{
+		margin-bottom:20px;
+		}
+	 .table1 tr{
+	 margin-bottom:20px;
+	 }
+	</style>
 </head>
 <body style="width:100%">
 	<h1>简介</h1>
 	<%=request.getAttribute("msg")==null?"":request.getAttribute("msg")%>
-	<form action="publishAbs" method="post" enctype="multipart/form-data">
-		<table border="0">
-			<tr>
-				<td>照片1</td>
-				<td><input type="file" name="picture1"></td>
+	<form class="form-horizontal" action="publishAbs" method="post" enctype="multipart/form-data">
+		<table border="0" class="table1">
+			<tr style="margin-bottom:20px;">
+				<td>
+					<label class="control-label" style="margin-bottom:10px">轮播图一:</label>
+					<input  type="file" name="picture1">
+				</td>
 				<td >
-					<button type="button" onclick="location='abstractList'">简介列表</button>
+					<button type="button" class="btn btn-primary" onclick="location='abstractList'">简介列表</button>
+				</td>
+			</tr>
+			<tr style="margin-bottom:20px;">
+				<td>
+					<label class="control-label" style="margin-bottom:10px">轮播图二:</label>
+					<input type="file" name="picture2">
 				</td>
 			</tr>
 			<tr>
-				<td>照片2</td>
-				<td><input type="file" name="picture2"></td>
-				<td rowspan="5"></td>
+				<td>
+					<label class="control-label" style="margin-bottom:10px">轮播图三:</label>
+					<input type="file" name="picture3">
+				</td>
+				
 			</tr>
 			<tr>
-				<td>照片3</td>
-				<td><input type="file" name="picture3"></td>
+				<td>
+					<label class="control-label" style="margin-bottom:10px">简介:</label>
+					<textarea  class="form-control" rows="10" cols="100" name="content"></textarea>
+				</td>
+				
 			</tr>
 			<tr>
-				<td>简介</td>
-				<td><textarea rows="20" cols="100" name="content"></textarea></td>
+				<td>
+					<label class="control-label" style="margin-bottom:10px">发布状态:</label>
+					<input type="checkbox" name="publishStatus">是
+				
+				</td>
+				
 			</tr>
 			<tr>
-				<td>发布状态</td>
-				<td><input type="checkbox" name="publishStatus"></td>
-			</tr>
-			<tr>
-				<td><input type="reset" value="清空"></td>
-				<td><input type="submit" value="发布"></td>
+				<td>
+					<input class="btn btn-defalt" type="reset" value="清空">
+					<input class="btn btn-primary" type="submit" value="发布">
+				</td>
+				
 			</tr>
 		</table>
 	</form>

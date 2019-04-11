@@ -88,7 +88,7 @@ public class SubscribeServlet extends HttpServlet {
 					}
 				}
 				
-				SubscribeService.pic("Name", "connect", "email", "gender", Integer.parseInt("age"), "item", com.thzm.eye025.util.Util.parseDate("date"), "description");
+				SubscribeService.pic("Name", "connect", "email", "gender", "age", "item", "date", "description","");
 				
 			} catch (FileUploadException e) {
 				e.printStackTrace();

@@ -118,6 +118,9 @@
 					RegUser user = (RegUser)session.getAttribute("userInfo");
 				if(user != null){
 					 out.print("你好:" + user.getUserName());
+				%>
+				<button  type="button" onclick="location='./logout'">退出</button>
+				<%
 				}else{
 				%>
 				<a href="reg_protocal.html" class="l">注册</a>
@@ -134,10 +137,23 @@
 				<input type="text">
 				<input type="button" value="检索">
 
+				<%
+				Blog blog = (Blog)session.getAttribute("blogInfo");
+				if(blog != null){
+					%>
+					
+					<a href="" class="r">我的博客</a>
+					<%
+				}
+				else{
+					%>
+					<a href="py.jsp" class="r">博客申请</a>
+					<%
+					
+				}
+				%>
 				
-				<a href="" class="r">我的博客</a>
-				<span>/</span>
-				<a href="">博客申请</a>
+				
 				
 			</div>
 		</div>

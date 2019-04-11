@@ -20,6 +20,12 @@ public class DepartmentService {
 		return DepartmentDAO.selectOne(sql, id);
 	}
 	
+	public static List<Department> listaone(int id) throws SQLException{
+		String sql = "select * from department where id=?";
+		return DepartmentDAO.select(sql,id);
+		
+	}
+	
 	public static List<Department> selectAll() throws SQLException{
 		String sql = "select * from department";
 		return DepartmentDAO.select(sql);
@@ -72,8 +78,10 @@ public class DepartmentService {
 	public static void main(String[] args) throws SQLException {
 //		System.out.println(getabstract());
 		
-//		System.out.println(listall());
+		System.out.println(listall());
 	//	System.out.println( pic("科室", "s", "你好啊"));
+		
+	//	System.out.println(getdepartment());
 		
 	}
 }

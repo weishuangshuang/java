@@ -48,4 +48,6 @@ public static List<Department> select(String sql, Object...args) throws SQLExcep
 	
 	}
 
+	
+
 }

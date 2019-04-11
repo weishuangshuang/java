@@ -10,8 +10,10 @@ public class Subscribe {
 	private String gender;
 	private String age;
 	private String item;
-	private Date date;
+	private String date;
 	private String  description;
+	private String  project;
+	
 	public String getName() {
 		return name;
 	}
@@ -48,10 +50,10 @@ public class Subscribe {
 	public void setItem(String item) {
 		this.item = item;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public String getDescription() {
@@ -60,8 +62,15 @@ public class Subscribe {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Subscribe(String name, String connect, String email, String gender, String age, String item, Date date,
-			String description) {
+	public String getProject() {
+		return project;
+	}
+	public void setProject(String project) {
+		this.project = project;
+	}
+	
+	public Subscribe(String name, String connect, String email, String gender, String age, String item, String date,
+			String description,String project) {
 		super();
 		this.name = name;
 		this.connect = connect;
@@ -71,6 +80,7 @@ public class Subscribe {
 		this.item = item;
 		this.date = date;
 		this.description = description;
+		this.project = project;
 	}
 	public Subscribe() {
 		super();
@@ -78,7 +88,7 @@ public class Subscribe {
 	@Override
 	public String toString() {
 		return "Subscribe [name=" + name + ", connect=" + connect + ", email=" + email + ", gender=" + gender + ", age="
-				+ age + ", item=" + item + ", date=" + date + ", description=" + description + "]";
+				+ age + ", item=" + item + ", date=" + date + ", description=" + description + ", project=" + project+ "]";
 	}
 	
 	

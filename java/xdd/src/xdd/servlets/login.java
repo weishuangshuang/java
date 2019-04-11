@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import xdd.ben.Blog;
 import xdd.ben.RegUser;
 import xdd.service.RegUserService;
 
@@ -65,9 +66,12 @@ public class login implements Servlet {
 		HttpServletRequest req = (HttpServletRequest) request;
 		
 		RegUser user = null;
+		boolean blog;
 		
 		try {
 			user = RegUserService.logo(admin, password);
+			
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 			ok = false;
@@ -84,6 +88,18 @@ public class login implements Servlet {
 				HttpSession session = req.getSession(true);
 				// 把用户信息放到Session 中。
 				session.setAttribute("userInfo", user);
+				
+				HttpSession s = req.getSession();
+				RegUser u = (RegUser) s.getAttribute("userInfo");
+				int id = u.getUserId();
+				
+				try {
+					Blog blo = RegUserService.sele(id);
+					session.setAttribute("blogInfo", blo);
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+				
 				
 				HttpServletResponse res  = (HttpServletResponse) response;
 				res.sendRedirect("./index.jsp");//向浏览器发送一个重定向。定向到

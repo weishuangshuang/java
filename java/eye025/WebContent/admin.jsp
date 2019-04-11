@@ -4,8 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<link rel='stylesheet'  type='text/css' href='././css/bootstrap.css'>
+<link rel='stylesheet'  type='text/css' href='././css/NewFile.css'>
+<title>首页</title>
 <style>
+		body{
+		margin:0;
+		padding:0
+		}
 	.header{
 		height: : 100px;
 		color: white;
@@ -13,7 +19,7 @@
 		text-align: center;
 		font-size: 40px;
 		line-height: 100px;
-		background: #562f2f;
+		background: #02a2aa;
 	}
 	.center{
 		height: 500px;
@@ -28,11 +34,22 @@
 		text-align: center;
 	}
 	.sidebar{
-		background: #ccc;
+		background: #fff;
 		width: 200px;
+		border-right:1px solid #eee
+	}
+	.sidebar ul{
+		list-style-type:none
+	}
+	.sidebar ul li{
+		line-height:50px;
+		padding-left:50rpx;
+	}
+	.sidebar ul li a{
+		text-decoration:none;
+		color:#333
 	}
 	.content{
-		
 		width: 100%;
 	}
 </style>
@@ -67,11 +84,10 @@
 		<div class="sidebar">
 			<ul>
 				<li><a href="abstract.jsp" target="content">医院简介</a></li>
-				<li><a href="department.jsp" target="content">科室介绍</a></li>
-				<li><a href="professor.jsp" target="content">专家介绍</a></li>
+				<li><a href="department.jsp" target="content">科室管理</a></li>
+				<li><a href="professor.jsp" target="content">专家管理</a></li>
 				<li><a href="subscribe.jsp" target="content">预约介绍</a></li>
-<%
-	      if(user.isSuperAdmin()){
+<%if(user.isSuperAdmin()){
 %>  
 	    	    <li><a href="sysadmin.html" target="content">管理员管理</a></li>
 <%    	

@@ -3,12 +3,12 @@
 	<section name="ShowViewDialog">
 		<item value="384" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="org.eclipse.wst.server.ui.ServersView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="org.eclipse.ui.views.ResourceNavigator" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
 		<item value="473" key="DIALOG_HEIGHT"/>
 		<item value="457" key="DIALOG_X_ORIGIN"/>
 		<item value="56" key="DIALOG_Y_ORIGIN"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="Server"/>
+			<item value="General"/>
 		</list>
 	</section>
 </section>

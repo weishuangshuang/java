@@ -5,8 +5,13 @@ import="java.util.List, com.thzm.eye025.bean.*"
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<link rel='stylesheet'  type='text/css' href='././css/bootstrap.css'>
+<title>简介列表</title>
 <style>
+body{
+padding:0;
+margin:0
+}
 	img{
 		width:100px;
 		height:100px;
@@ -14,14 +19,24 @@ import="java.util.List, com.thzm.eye025.bean.*"
 </style>
 </head>
 <body>
-    <table>
+    <table class='table table-striped table-hover'>
+    	<thead>
+    		<tr>
+    			<th>内容</th>
+    			<th>图片</th>
+    			<th>图片</th>
+    			<th>图片</th>
+    			<th style="width:120px">发布状态</th>
+    			<th style="width:200px">操作</th>
+    		</tr>
+    	</thead>
 <%
     List<Abstract> list = (List<Abstract>)request.getAttribute("list");
     if(null != list){
     	for(int i=0;i<list.size();i++){
     	    Abstract a = list.get(i);
 %>    	
-    	<tr>
+    	<tr class="tr">
     		<td><%=a.getContent() %></td>
     		<%if(a.getPicture1() != null){ %>
     		<td><img src=".<%=a.getPicture1()%>"></td>
@@ -36,8 +51,8 @@ import="java.util.List, com.thzm.eye025.bean.*"
     		<%} %>
     		<td><%=a.isPublishStatus()?"是":"否"%></td>
     		<td>
-    			<button onclick="location.href='fabu?absId=<%=a.getId()%>'">发布</button>
-    			<button onclick="location.href='delAbs?absId=<%=a.getId() %>'">删除</button>
+    			<button class="btn btn-primary" onclick="location.href='fabu?absId=<%=a.getId()%>'">发布</button>
+    			<button class="btn btn-default" onclick="location.href='delAbs?absId=<%=a.getId() %>'">删除</button>
     		</td>
     	</tr>
 <%
